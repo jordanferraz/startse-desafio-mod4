@@ -1,6 +1,9 @@
+/* importação de fontes */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+/* configurações básicas */
 *{
     padding:0; margin:0;
     box-sizing: border-box;
@@ -254,6 +257,8 @@ nav{
     transform: scale(1.15);
 }
 
+/* rodapé */
+
 #footer{
     flex-direction: column;
     width: 100%;
@@ -358,7 +363,7 @@ nav{
 
 @keyframes text_reveal_box2{
     0%{
-        width:100%;
+        width:105%;
         left:0;
     }
     50%{
@@ -366,7 +371,7 @@ nav{
         left:100%;
     }
     100%{
-        width:100%;
+        width:105%;
         left:0;
     }
 }
@@ -380,7 +385,7 @@ nav{
     }
 }
 
-/* media query */
+/* media query - maior que 768px */
 
 @media only screen and (min-width:768px){
 
@@ -412,7 +417,7 @@ nav{
     
 }
 
-/* media query */
+/* media query - menor que 768px */
 
 @media only screen and (max-width:768px){
     #portfolio .all-projects{
