@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    padding:0; margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:10px;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p{
+    font-size:1.4rem;
+    margin-top:5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+
+nav{
+    opacity: 0.0;
+    animation: cta_reveal 2s ease forwards;
+    animation-delay: 6s;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title{
+    font-size:4rem;
+    font-weight: 700;
+    color: white;
+    margin: 50px 0px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    border-top: 10px solid gold;
+    border-bottom: 10px solid gold;
+}
+
+/* seção de apresentação */
+
+#presentation{
+    background-image: url(bg-desafio.jpg);
+    background-size:cover;
+    background-position:top center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 5px 10px 18px rgba(0,0,0,0.4);
+}
+
+#presentation h1{
+    display: block;
+    width: fit-content;
+    font-size:  7rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1.5s;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#presentation h1:nth-child(1){
+    animation-delay: .8s;
+}
+
+#presentation h1:nth-child(2){
+    animation-delay: 1.8s;
+}
+
+#presentation h1:nth-child(3):before{
+    content:'uma camisa';
+    color:transparent;
+}
+
+#presentation h1:nth-child(3):before{
+    animation: text_reveal_name2 8s ease infinite 0s;
+    animation-delay: 2.5s;
+}
+
+
+#presentation .cta{
+    display: inline-block;
+    padding:10px 30px;
+    color: #ee13f5;
+    background-color: transparent;
+    border: 2px solid #ee13f5;
+    font-size:2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top:30px;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+    box-shadow: 0px 0px 10px rgba(238,19,245,0.9);
+}
+
+#presentation .cta:hover{ 
+    color: white;
+    background-color: #ee13f5;
+    font-weight: 500;
+}
+
+#presentation h1 span{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 0%;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+    background-color: #2ceff3;
+    box-shadow: 2px 2px 5px rgba(44,239,243,0.9);
+
+}
+
+#presentation h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+
+#presentation h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+#presentation h1:nth-child(3) span{
+    animation: text_reveal_box2 4s ease infinite 0s;
+    animation-delay: 2.5s;
+}
+
+
+#presentation::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index:-1;
+}
+
+/* seção de portfólio */
+
+.bg-portfolio{
+    background: linear-gradient(180deg, #270e52 0%, #000036 100%)
+}
+
+#portfolio .portfolio{
+    flex-direction: column;
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 50px 0px 100px 0px;    
+}
+
+#portfolio .portfolio-header{
+    width: auto;
+    padding: 0px 0px 40px 0px;
+}
+
+#portfolio .portfolio-header h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
+    
+}
+
+#portfolio .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#portfolio .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px 10%;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 5;
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
+}
+
+#portfolio .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height:100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(160deg, #22206b 0%, #1e1a67 100%);
+    color: white;
+}
+
+#portfolio .project-info h1{
+    font-size:4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: gold;
+}
+
+#portfolio .project-info h2{
+    font-size:1.8rem;
+    font-weight:700;
+    margin: 0px 0px 20px 0px;
+}
+
+#portfolio .project-img{
+    flex-basis: 50%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+#portfolio .project-img:after{
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.5;
+}
+
+#portfolio .project-img img{
+    transition: 0.5s ease transform;
+    transform: scale(1.05)
+}
+
+#portfolio .project-item:hover .project-img img{
+    transform: scale(1.15);
+}
+
+#footer{
+    flex-direction: column;
+    width: 100%;
+    margin:0 auto;
+    padding: 50px 0px 100px 0px; 
+    background-color: white;
+    z-index: 10;
+    box-shadow: 5px -5px 10px rgba(0,0,0,0.2);
+}
+
+.footer_name{
+    width: 100%;
+    text-align: center;
+}
+
+.footer_name h3{
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+}
+
+.footer_social{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+
+.footer_social a{
+    font-size: 1.5rem;
+    color: black;
+    background-color: gold;
+    padding: 10px 25px;
+    transition: 0.3s ease;
+    transition-property: padding;
+}
+
+.footer_social a:hover{
+    padding:15px 35px;
+}
+
+.footer_copyright{
+    width: 100%;
+    text-align: center;
+    font-size: 1;
+    margin: 0px 0px 0px 0px;
+}
+
+
+/* keyframes */
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name{
+    100%{
+        color: #ee13f5;
+        font-weight: 700;
+
+    }
+}
+
+@keyframes text_reveal_name2{
+    0%{
+        content: "uma camisa";
+        color: #2ceff3;
+        font-weight: 700;
+
+    }
+    25%{
+        content: "uma camisa";
+        color: #2ceff3;
+        font-weight: 700;
+
+    }
+    50%{
+        content: "uma caneca";
+        color: #2ceff3;
+        font-weight: 700;
+
+    }
+    100%{
+        content: "uma caneca";
+        color: #2ceff3;
+        font-weight: 700;
+
+    }
+}
+
+@keyframes text_reveal_box{
+    50%{
+        width:100%;
+        left:0;
+    }
+    100%{
+        width:0;
+        left:100%;
+    }
+}
+
+@keyframes text_reveal_box2{
+    0%{
+        width:100%;
+        left:0;
+    }
+    50%{
+        width:0%;
+        left:100%;
+    }
+    100%{
+        width:100%;
+        left:0;
+    }
+}
+
+@keyframes cta_reveal{
+    0%{
+        opacity: 0.0;
+    }
+    100%{
+        opacity: 1.0;
+    }
+}
+
+/* media query */
+
+@media only screen and (min-width:768px){
+
+
+    #portfolio .project-item{
+        flex-direction: row;
+        height: 400px;
+        width: 100%;
+        border-radius: 0;
+        margin: 0 auto;
+    }
+
+    #portfolio .all-projects{
+        width: 80%;
+    }
+
+
+    #portfolio .all-projects .project-info{
+        height: 100%;
+    }
+
+    #portfolio .all-projects .project-img{
+        height: 100%;
+    }
+
+    #portfolio .project-item:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    
+}
+
+/* media query */
+
+@media only screen and (max-width:768px){
+    #portfolio .all-projects{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    #portfolio .project-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        margin: 20px auto 40px auto;
+        overflow: hidden;
+    }
+
+    #portfolio .project-info{
+        width: 100%;
+        padding: 0 10%;
+    }
+
+    #portfolio .project-info h1{
+        font-size: 2.5rem;
+        margin:30px 0px 10px 0px;
+        text-align: center;
+        width: 100%;
+    }
+
+    #portfolio .project-info h2{
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    #portfolio .project-info p{
+        margin:5px 0px 30px 0px;
+    }
+
+    #portfolio .project-img{
+        width: 100%;
+        height: 400px;
+    }
+
+    #portfolio .project-img img{
+        width: 100%;
+        height: 30vh;
+    }
+
+}
